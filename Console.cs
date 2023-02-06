@@ -170,6 +170,8 @@ namespace Library_jan
                         }
                 }
             }
+            System.Console.WriteLine('\n' + "Программа завершила работу");
+            System.Console.ReadKey();
         }
     }
 }
