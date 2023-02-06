@@ -53,15 +53,20 @@ namespace Library_jan
                     case 1:
                         try
                         {
-                            System.Console.WriteLine("Введите радиус круга");
+                            System.Console.WriteLine('\n' + "Введите радиус круга");
                             string radius = System.Console.ReadLine();
 
                             if (isNumber(radius) != "error")
                             {
                                 var circle = new Circle("Круг", Convert.ToDouble(radius));
 
-                                string currentShape = circle.ToString();
-                                System.Console.WriteLine(currentShape + " Площадь = " + circle.Square());
+                                /* 
+                                 Для проверки определения названия текущей фигуры используется currentShape
+                                 string currentShape = circle.ToString();
+                                 System.Console.WriteLine(currentShape + " Площадь = " + result);
+                                */
+
+                                System.Console.WriteLine('\n' + "Площадь = " + circle.Square());
 
                                 WriteText();
                                 currentNumber = GoNext();
@@ -89,7 +94,7 @@ namespace Library_jan
                         double EdgeA, EdgeB, EdgeC;
                         try
                         {
-                            System.Console.WriteLine("Введите 1 сторону треугольника из 3");
+                            System.Console.WriteLine('\n' + "Введите 1 сторону треугольника из 3");
                             string strTriangle;
 
                             if (isNumber(strTriangle = System.Console.ReadLine()) != "error")
@@ -106,7 +111,7 @@ namespace Library_jan
                                     }
                                     else
                                     {
-                                        System.Console.WriteLine("Сторона 3 не является числом");
+                                        System.Console.WriteLine('\n' + "Сторона 3 не является числом");
                                         WriteText();
                                         currentNumber = GoNext();
                                         break;
@@ -114,7 +119,7 @@ namespace Library_jan
                                 }
                                 else
                                 {
-                                    System.Console.WriteLine("Сторона 2 не является числом");
+                                    System.Console.WriteLine('\n' + "Сторона 2 не является числом");
                                     WriteText();
                                     currentNumber = GoNext();
                                     break;
@@ -122,15 +127,21 @@ namespace Library_jan
                             }
                             else
                             {
-                                System.Console.WriteLine("Сторона 1 не является числом");
+                                System.Console.WriteLine('\n' + "Сторона 1 не является числом");
                                 WriteText();
                                 currentNumber = GoNext();
                                 break;
                             }
-                        var triangle = new Triangle("Треугольник", EdgeA, EdgeB, EdgeC);
-                        var result = triangle.Square();
-                        string currentShape = triangle.ToString();
-                        System.Console.WriteLine(currentShape + " Площадь = " + result);
+                            var triangle = new Triangle("Треугольник", EdgeA, EdgeB, EdgeC);
+                            var result = triangle.Square();
+
+                            /*
+                             Для проверки определения названия текущей фигуры используется currentShape
+                             string currentShape = triangle.ToString();
+                             System.Console.WriteLine(currentShape + " Площадь = " + result);
+                            */
+
+                            System.Console.WriteLine('\n' + "Площадь = " + result);
                         }
                         catch (Exception e)
                         {
